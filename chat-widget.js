@@ -227,28 +227,29 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            width: 60px;
-            height: 60px;
-            border-radius: 30px;
-            background: linear-gradient(135deg, var(--chat--color-primary) 0%, var(--chat--color-secondary) 100%);
-            color: white;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(133, 79, 255, 0.3);
-            z-index: 999;
-            transition: transform 0.3s;
+            min-width: 180px;
+            height: 56px;
+            border-radius: 28px;
+            background: #86d16b;
+            color: #222;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        .n8n-chat-widget .chat-toggle.position-left {
-            right: auto;
-            left: 20px;
+            gap: 14px;
+            box-shadow: 0 4px 16px rgba(133, 79, 255, 0.15);
+            border: none;
+            cursor: pointer;
+            padding: 0 28px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+            z-index: 999;
         }
 
         .n8n-chat-widget .chat-toggle:hover {
-            transform: scale(1.05);
+            background: #6bbf4e;
+            box-shadow: 0 6px 24px rgba(133, 79, 255, 0.22);
+            transform: scale(1.04);
         }
 
         .n8n-chat-widget .chat-toggle svg {
@@ -275,6 +276,19 @@
 
         .n8n-chat-widget .chat-footer a:hover {
             opacity: 1;
+        }
+
+        @media (max-width: 600px) {
+            .n8n-chat-widget .chat-container {
+                width: 100vw !important;
+                height: 100vh !important;
+                right: 0 !important;
+                left: 0 !important;
+                bottom: 0 !important;
+                border-radius: 0 !important;
+                max-width: 100vw !important;
+                max-height: 100vh !important;
+            }
         }
     `;
 
@@ -385,9 +399,17 @@
     const toggleButton = document.createElement('button');
     toggleButton.className = `chat-toggle${config.style.position === 'left' ? ' position-left' : ''}`;
     toggleButton.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2.5 21.5l4.5-.838A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.476 0-2.886-.313-4.156-.878l-3.156.586.586-3.156A7.962 7.962 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
-        </svg>`;
+      <svg width="32" height="32" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024">
+        <g id="SVGRepo_bgCarrier" stroke-width="0">
+          <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#86d16b" strokewidth="0"></rect>
+        </g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3121 23.3511C17.4463 23.0228 16.7081 22.5979 16.1266 22.1995C14.8513 22.7159 13.4578 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 14.2788 22.306 16.3983 21.1179 18.1551C21.0425 19.6077 21.8054 20.9202 22.5972 22.0816C23.2907 23.0987 23.1167 23.9184 21.8236 23.9917C21.244 24.0245 19.9903 23.9874 18.3121 23.3511ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 13.9503 20.3808 15.7531 19.328 17.2262C18.8622 17.8782 19.1018 19.0998 19.2616 19.8011C19.4167 20.4818 19.7532 21.2051 20.0856 21.8123C19.7674 21.7356 19.4111 21.6288 19.0212 21.481C18.1239 21.1407 17.3824 20.6624 16.8594 20.261C16.5626 20.0332 16.1635 19.9902 15.825 20.1494C14.6654 20.6947 13.3697 21 12 21C7.02944 21 3 16.9706 3 12ZM8.03001 15.2425C7.87428 14.6196 8.36619 14.0002 9.00016 13.9998H15.0002C15.6333 14.0002 16.126 14.6172 15.9703 15.24C15.4525 16.9881 13.7854 18 12.0002 18C10.2834 18 8.46902 16.9986 8.03001 15.2425ZM16.5 10C16.5 10.8284 15.8284 11.5 15 11.5C14.1716 11.5 13.5 10.8284 13.5 10C13.5 9.17157 14.1716 8.5 15 8.5C15.8284 8.5 16.5 9.17157 16.5 10ZM9 11.5C9.82843 11.5 10.5 10.8284 10.5 10C10.5 9.17157 9.82843 8.5 9 8.5C8.17157 8.5 7.5 9.17157 7.5 10C7.5 10.8284 8.17157 11.5 9 11.5Z" fill="#000000"></path>
+        </g>
+      </svg>
+      <span style="font-weight: bold; font-size: 18px; color: #222;">Una pregunta?</span>
+    `;
     
     widgetContainer.appendChild(chatContainer);
     widgetContainer.appendChild(toggleButton);
@@ -430,7 +452,7 @@
 
             const botMessageDiv = document.createElement('div');
             botMessageDiv.className = 'chat-message bot';
-            botMessageDiv.textContent = Array.isArray(responseData) ? responseData[0].output : responseData.output;
+            botMessageDiv.innerHTML = Array.isArray(responseData) ? responseData[0].output : responseData.output;
             messagesContainer.appendChild(botMessageDiv);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
         } catch (error) {
