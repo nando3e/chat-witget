@@ -12816,7 +12816,7 @@ function Ts(t, e) {
     }),
     // Círculo blanco de fondo para la burbuja (cara)
     he("circle", {
-      cx: 12, cy: 12, r: 11, fill: "#fff"
+      cx: 12, cy: 12, r: 11, fill: "ffffff"
     }),
     // Burbuja sonriente completa
     he("path", {
