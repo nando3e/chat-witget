@@ -12845,7 +12845,7 @@ function Ts(t, e) {
       "font-family": "Arial, sans-serif",
       "font-size": "4.32",
       fill: "#3c9a3e"
-    }, "Una pregunta?")
+    }, "Una pregunta???")
   ], -1), U7 = [
     $7
   ];
