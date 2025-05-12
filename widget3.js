@@ -12832,7 +12832,7 @@ function Ts(t, e) {
       d: "M21.22 6 H55.08 A2 2 0 0 1 57.08 8 V16 A2 2 0 0 1 55.08 18 H21.22",
       fill: "none",
       stroke: "#2f7949",
-      "stroke-width": "1",
+      "stroke-width": "2",
       "stroke-linecap": "round",
       "stroke-linejoin": "round"
     }),
