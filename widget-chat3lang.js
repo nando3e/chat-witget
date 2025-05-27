@@ -12807,19 +12807,19 @@ function Ts(t, e) {
   
 let lang = document.documentElement.lang || "ca";
 lang = lang.slice(0, 2);
-let svgText = " AAlguna pregunta?";
+let svgText = "Alguna pregunta?";
 if (lang === "en") svgText = "Any question?";
 if (lang === "es") svgText = "¿Una pregunta?";
   
   
   const P7 = {
-    viewBox: "0 0 82 24",
-    width: "13em",
+    viewBox: "0 0 75 24",
+    width: "12em",
     height: "4em"
   }, $7 = /* @__PURE__ */ he("g", null, [
 // Bandera blanca detrás de la burbuja
 he("path", {
-  d: "M21.22 6 H65.08 A2 2 0 0 1 67.08 8 V16 A2 2 0 0 1 65.08 18 H21.22 Z",
+  d: "M21.22 6 H58.08 A2 2 0 0 1 60.08 8 V16 A2 2 0 0 1 58.08 18 H21.22 Z",
   fill: "#fff"
 }),
 // Grupo de la burbuja sonriente
@@ -12847,7 +12847,7 @@ he("g", { transform: "translate(1.2,1.2) scale(0.9)" }, [
 ]),
 // Contorno de la bandera
 he("path", {
-  d: "M21.22 6 H55.08 A2 2 0 0 1 57.08 8 V16 A2 2 0 0 1 55.08 18 H21.22",
+  d: "M21.22 6 H58.08 A2 2 0 0 1 60.08 8 V16 A2 2 0 0 1 58.08 18 H21.22",
   fill: "none",
   stroke: "#3c9a3e",
   "stroke-width": "0.6",
@@ -12859,7 +12859,7 @@ he("path", {
 
 // Texto centrado
 he("text", {
-  x: "38.15",
+  x: "41.15",
   y: "12",
   "text-anchor": "middle",
   "dominant-baseline": "middle",
