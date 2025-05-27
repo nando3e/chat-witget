@@ -12813,13 +12813,13 @@ if (lang === "es") svgText = "¿Una pregunta?";
   
   
   const P7 = {
-    viewBox: "0 0 72 24",
-    width: "12em",
+    viewBox: "0 0 82 24",
+    width: "13em",
     height: "4em"
   }, $7 = /* @__PURE__ */ he("g", null, [
 // Bandera blanca detrás de la burbuja
 he("path", {
-  d: "M21.22 6 H55.08 A2 2 0 0 1 57.08 8 V16 A2 2 0 0 1 55.08 18 H21.22 Z",
+  d: "M21.22 6 H65.08 A2 2 0 0 1 67.08 8 V16 A2 2 0 0 1 65.08 18 H21.22 Z",
   fill: "#fff"
 }),
 // Grupo de la burbuja sonriente
