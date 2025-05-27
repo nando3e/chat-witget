@@ -12807,7 +12807,7 @@ function Ts(t, e) {
   
 let lang = document.documentElement.lang || "ca";
 lang = lang.slice(0, 2);
-let svgText = "Alguna pregunta?";
+let svgText = " AAlguna pregunta?";
 if (lang === "en") svgText = "Any question?";
 if (lang === "es") svgText = "¿Una pregunta?";
   
